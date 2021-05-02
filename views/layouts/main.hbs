@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet" />
+    <title>FT App Meisam E Zarghani</title>
+    <script src="https://kit.fontawesome.com/a511542277.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <form id="second-form">
+            <div class="search-container">
+                <input type="text" id="search-input" class="search-box" placeholder="search the FT" value="" />
+                <button id="search-button" class="search-button" type="submit" value="submit">
+                    Search
+                </button>
+            </div>
+            <div class="pageNumberContainer">
+                <button id="itemsPerPage" class="itemsPerPage">5</button>
+                <div class="paginatedNumber" id="pageNumberItems">
+                    <button id="item-1" class="items">5</button>
+                    <button id="item-2" class="items">10</button>
+                    <button id="item-3" class="items">20</button>
+                </div>
+                <p class="itemPerPage">Items per page!</p>
+                <button href="#" class="paginationPrevious" id="paginationPrevious">
+                    <i class="fas fa-angle-left"></i>
+                </button>
+                <button href="#" class="pagination1" id="pagination1"></button>
+                <button href="#" class="pagination2" id="pagination2"></button>
+                <button href="#" class="pagination3" id="pagination3"></button>
+                <button href="#" class="paginationNext" id="paginationNext">
+                    <i class="fas fa-angle-right"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div id="main">
+    <div class="container">
+        {{{body}}}
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </div>
+</body>
+<footer class="mainfooter" role="contentinfo">
+    <div className="footer animate__animated animate__fadeInUp">
+        <div>
+            <p>Meisam E Zarghani &nbsp;&nbsp;|&nbsp; May - 2021 </p>
+        </div>
+    </div>
+</footer>
+
+</html>
