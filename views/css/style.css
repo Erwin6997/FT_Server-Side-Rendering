@@ -1,0 +1,267 @@
+* {
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #CCC1B7;
+  border-radius: 5px;
+}
+
+body {
+  background-color: #FFF1E5;
+  overflow-y: overlay;
+}
+
+#main {
+  margin-top: 130px;
+}
+
+#root {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+.title-container {
+  width: 100%;
+  height: 65px;
+  font-size: 32px;
+  letter-spacing: 2PX;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  background-color: #FFF1E5;
+}
+
+#second-form {
+  width: 100%;
+  height: 55px;
+  background-color: #CCC1B7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container {
+  width: 40%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box {
+  width: 70%;
+  height: 28px;
+  margin-right: 10px;
+  outline: none;
+  text-indent: 10px;
+}
+
+.search-box:focus {
+  box-shadow: 0px 0px 0px 2px rgba(68, 68, 68, 0.733);
+}
+
+.search-button {
+  width: 70px;
+  height: 33px;
+  background-color: #2b2b2b;
+  color: white;
+  border: none;
+  transition: 200ms;
+  margin-right: 20px;
+}
+
+.search-button:hover {
+  background-color: #444444;
+  cursor: pointer;
+}
+
+.paginatedNumber {
+  display: none;
+  width: 40px;
+  height: 99px;
+  position: absolute;
+  margin-top: 132px;
+}
+
+.items {
+  width: 40px;
+  height: 33px;
+  background-color: #0D7680;
+  color: white;
+  border: none;
+  transition: 200ms;
+}
+
+.items:hover {
+  background-color: #29a2ad;
+  cursor: pointer;
+}
+
+.itemsPerPage {
+  width: 40px;
+  height: 33px;
+  background-color: #e9dccf;
+  border: 1px solid #0D7680;
+  font-size: 16px;
+  font-weight: 400;
+  color: #0D7680;
+  margin-right: 5px;
+  transition: 200ms;
+}
+
+.itemsPerPage:hover,
+.pagination1:hover,
+.pagination3:hover,
+.paginationPrevious:hover,
+.paginationNext:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #0D7680;
+}
+
+.pageNumberContainer {
+  height: 33px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.itemPerPage {
+  margin-right: 10px;
+}
+
+.containerNews {
+  margin: 10px 15% 10px 15%;
+  padding: 15px 30px 5px 30px;
+  font-family: FinancierDisplayWeb, serif;
+  border-bottom: 1px solid #CCC1B7;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #990f3d;
+  line-height: 33px;
+  text-decoration: none;
+}
+
+.title:hover {
+  color: #383838;
+}
+
+.summery {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 25px;
+  color: #333322;
+  text-decoration: none;
+}
+
+.subheading {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 25px;
+  color: #333330;
+  text-decoration: none;
+}
+
+.byline {
+  padding-top: 30px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  color: #383838;
+  text-decoration: none;
+}
+
+.containerDate {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.date {
+  margin-right: 5px;
+  font-weight: 300;
+}
+
+.pagination1,
+.pagination2,
+.pagination3,
+.paginationPrevious,
+.paginationNext {
+  width: 40px;
+  height: 33px;
+  background-color: #e9dccf;
+  border: 1px solid #0D7680;
+  font-size: 16px;
+  font-weight: 400;
+  color: #0D7680;
+  transition: 200ms;
+}
+
+.pagination2 {
+  background-color: #0D7680;
+  color: white;
+}
+
+.deactive {
+  width: 40px;
+  height: 33px;
+  background-color: #e9dccf;
+  border: 1px solid #0D7680;
+  font-size: 16px;
+  font-weight: 400;
+  color: #797979;
+}
+footer {
+  text-align: center;
+  background: #CCC1B7;
+  height: 30px;
+  position: sticky;
+  color: #5c5b5a;
+  display: flex;
+  font-size: 13px;
+  padding-top: 5px;
+  padding-left: 18%;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 890px) {
+  #main {
+    margin-top: 180px;
+  }
+  .containerNews {
+    margin: 10px 5% 10px 5%;
+  }
+
+  #second-form {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .search-container {
+    width: 90%;
+  }
+}

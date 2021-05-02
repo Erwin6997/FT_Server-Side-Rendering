@@ -1,27 +1,23 @@
-<div class="posts">
-    <div class="row justify-content-center">
-        {{#each posts}}
-        <div class="col-lg-7" style="margin-top: 50px;">
-            <div class="card">
-
-                <img src="{{this.image}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Posted by {{this.author}}</h5>
-
-                    {{#if this.comments}}
-                    <ul class="list-group">
-                        {{#each this.comments}}
-                        <li class="list-group-item">{{getShortComment this}}</li>
-                        {{/each}}
-                    </ul>
-                    {{else}}
-                    <ul class="list-group">
-                        <li class="list-group-item">Be first to comment on this post</li>
-                    </ul>
-                    {{/if}}
-                </div>
-            </div>
-        </div>
-        {{/each}}
+<div class="container">
+    {{#each posts}}
+<div class="containerNews">
+    <div class="containerTitle"><a href="{{this.location.uri}}"
+            class="title">{{this.title.title}}</a></div>
+    <div class="containerSummery">
+        <p class="summery">{{this.summary.excerpt}}</p>
     </div>
+    <div class="containerEditorial"><a href="{{this.location.uri}}"
+            class="subheading">{{this.editorial.subheading}}</a></div>
+    <div class="containerByline">
+        {{#if this.editorial.byline}}
+        <p class="byline">{{this.editorial.byline}}</p>
+        {{else}}
+        <p class="byline">" "</p>
+        {{/if}}
+        <div class="containerDate">
+            <p class="date">{{timeDate this.lifecycle.initialPublishDateTime}}</p>
+        </div>
+    </div>
+</div>
+{{/each}}
 </div>
