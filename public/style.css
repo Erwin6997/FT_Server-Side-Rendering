@@ -93,33 +93,6 @@ body {
   margin-top: 132px;
 }
 
-.items {
-  width: 40px;
-  height: 33px;
-  background-color: #0D7680;
-  color: white;
-  border: none;
-  transition: 200ms;
-}
-
-.items:hover {
-  background-color: #29a2ad;
-  cursor: pointer;
-}
-
-.itemsPerPage {
-  width: 40px;
-  height: 33px;
-  background-color: #e9dccf;
-  border: 1px solid #0D7680;
-  font-size: 16px;
-  font-weight: 400;
-  color: #0D7680;
-  margin-right: 5px;
-  transition: 200ms;
-}
-
-.itemsPerPage:hover,
 .pagination1:hover,
 .pagination3:hover,
 .paginationPrevious:hover,
@@ -135,10 +108,6 @@ body {
   display: flex;
   align-items: center;
   flex-direction: row;
-}
-
-.itemPerPage {
-  margin-right: 10px;
 }
 
 .containerNews {
@@ -206,14 +175,18 @@ body {
 .pagination3,
 .paginationPrevious,
 .paginationNext {
-  width: 40px;
-  height: 33px;
+  width: 28px;
+  height: 16px;
   background-color: #e9dccf;
   border: 1px solid #0D7680;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: #0D7680;
   transition: 200ms;
+  font-family: MetricWeb,sans-serif;
+  padding: 6px 5px;
+  margin: 0 0 0 5px;
+  text-align: center;
 }
 
 .pagination2 {
