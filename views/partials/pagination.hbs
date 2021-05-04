@@ -1,0 +1,73 @@
+<div class="pageNumberContainer" id="second-form">
+    {{#if this.finalPages.prevPage}}
+        <a  
+            href="/?key={{key}}&page={{this.finalPages.prevPage}}" 
+            class="paginationPrevious">
+            <i class="fas fa-angle-left"></i>
+        </a>
+
+    {{else}}
+        <a  
+            href="/?key={{key}}&page={{this.finalPages.prevPage}}" 
+            class={{this.finalPages.class}}>
+            <i class="fas fa-angle-left"></i>
+        </a>
+        {{/if}}
+
+
+    {{#if this.finalPages.prevPage}}
+        <a 
+            href="/?key={{key}}&page={{this.finalPages.prevPage}}"
+            class="pagination1">
+            {{this.finalPages.prevPage}}
+        </a>
+    {{else}}
+            <a 
+            href="/?key={{key}}&page={{this.finalPages.prevPage}}"
+            class={{this.finalPages.class}}>
+            {{this.finalPages.prevPage}}
+        </a>
+    {{/if}}
+    {{#if this.finalPages.currentPage}}
+        <a 
+            href="/?key={{key}}&page={{this.finalPages.currentPage}}"
+            class="pagination2">
+            {{this.finalPages.currentPage}}
+        </a>
+    {{else}}
+        <a 
+            href="/?key={{key}}&page={{this.finalPages.currentPage}}"
+            class={{this.finalPages.class}}>
+            {{this.finalPages.currentPage}}
+        </a>
+
+    {{/if}}
+    {{#if this.finalPages.nextPage}}
+    <pre>with ifff {{this.finalPages.nextPage}}</pre>
+        <a 
+            href="/?key={{key}}&page={{this.finalPages.nextPage}}"
+            class="pagination3" >
+            {{this.finalPages.nextPage}}
+        </a>
+    {{else}}
+        <a 
+            href="/?key={{key}}&page={{this.finalPages.nextPage}}"
+            class={{this.finalPages.class}}>
+            {{this.finalPages.nextPage}}
+        </a>
+    {{/if}}
+    {{#if this.finalPages.nextPage}}
+    <p>with ifff {{this.finalPages.nextPage}}</p>
+        <a 
+            href="/?key={{key}}&page={{this.finalPages.nextPage}}"
+            class="paginationNext">
+            <i class="fas fa-angle-right"></i>
+        </a>
+    {{else}}
+        <a 
+            href="/?key={{key}}&page={{this.finalPages.nextPage}}"
+            class={{this.finalPages.class}}>
+            <i class="fas fa-angle-right"></i>
+        </a>
+    {{/if}}
+</div>
