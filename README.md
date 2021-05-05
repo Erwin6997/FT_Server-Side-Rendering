@@ -1,6 +1,6 @@
 # Welcome to FT-server-Side-Rendering
 
-![FT](https://www.samanthaettus.com/wp-content/uploads/2014/08/ft-logo.png 1.1k)
+![FT](https://www.samanthaettus.com/wp-content/uploads/2014/08/ft-logo.png)
 
 The FT server application is for achieve world news headlines that client can access the news that contains the keyword by searching for a specific keyword. like the Brexit, so the application shows all the news about Brexit.
 Also the application has pagination which has the ability to categorize the pages into a specific number that client select.
