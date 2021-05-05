@@ -9,7 +9,7 @@
     {{else}}
         <a  
             href="/?key={{key}}&page={{this.finalPages.prevPage}}" 
-            class={{this.finalPages.class}}>
+            class="paginatedNumber">
             <i class="fas fa-angle-left"></i>
         </a>
         {{/if}}
@@ -24,26 +24,16 @@
     {{else}}
             <a 
             href="/?key={{key}}&page={{this.finalPages.prevPage}}"
-            class={{this.finalPages.class}}>
+            class="paginatedNumber">
             {{this.finalPages.prevPage}}
         </a>
     {{/if}}
-    {{#if this.finalPages.currentPage}}
         <a 
             href="/?key={{key}}&page={{this.finalPages.currentPage}}"
             class="pagination2">
             {{this.finalPages.currentPage}}
         </a>
-    {{else}}
-        <a 
-            href="/?key={{key}}&page={{this.finalPages.currentPage}}"
-            class={{this.finalPages.class}}>
-            {{this.finalPages.currentPage}}
-        </a>
-
-    {{/if}}
     {{#if this.finalPages.nextPage}}
-    <pre>with ifff {{this.finalPages.nextPage}}</pre>
         <a 
             href="/?key={{key}}&page={{this.finalPages.nextPage}}"
             class="pagination3" >
@@ -52,12 +42,11 @@
     {{else}}
         <a 
             href="/?key={{key}}&page={{this.finalPages.nextPage}}"
-            class={{this.finalPages.class}}>
+            class="paginatedNumber">
             {{this.finalPages.nextPage}}
         </a>
     {{/if}}
     {{#if this.finalPages.nextPage}}
-    <p>with ifff {{this.finalPages.nextPage}}</p>
         <a 
             href="/?key={{key}}&page={{this.finalPages.nextPage}}"
             class="paginationNext">
@@ -66,7 +55,7 @@
     {{else}}
         <a 
             href="/?key={{key}}&page={{this.finalPages.nextPage}}"
-            class={{this.finalPages.class}}>
+            class="paginatedNumber">
             <i class="fas fa-angle-right"></i>
         </a>
     {{/if}}

@@ -9,12 +9,9 @@ const paginateHelper = require('express-handlebars-paginate');
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended: true}));
-const PORT = process.env.PORT || 3000;
 app.use(express.static(__dirname + '/public'));
-//Handlebars.registerHelper('paginate', paginate);
-// Handlebars settings
 app.set('view engine', 'hbs');
-const limit = 10;
+const PORT = process.env.PORT || 3000;
 app.engine('hbs', exphbs({
     defaultLayout: 'main',
     extname: '.hbs',
@@ -46,10 +43,15 @@ app.get('/', async (req, res) => {
         const page = parseInt(req.query.page);
         bodySend.queryString = key;
         const dataFetch = await fetchAPI()
-        const paginationData = await pagination(dataFetch , page)
-        const finalResults = paginationData.results;
-        const finalPages = paginationData.pages;
-        res.render('home', {finalResults , finalPages , key})
+    if (dataFetch.results[0].indexCount == 0) {
+        const message = `The Search ${dataFetch.query.queryString} not found `;
+        res.render('home', {message})
+        }else {
+            const paginationData = await pagination(dataFetch , page)
+            const finalResults = paginationData.results;
+            const finalPages = paginationData.pages;
+            res.render('home', {finalResults , finalPages , key})
+        }
         } catch(error) {console.log(error)}
 });
 
@@ -57,6 +59,7 @@ async function pagination(dataFetch , page) {
     if (!page){
         page = 1;
     }
+    const limit = 10;
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
     const results = {}
@@ -64,18 +67,15 @@ async function pagination(dataFetch , page) {
         results.pages = {
             prevPage : null ,
             currentPage : page ,
-            nextPage : dataFetch.results[0].maxResults / limit > 1 ? 2 : null,
-            class : "deactive"
+            nextPage : dataFetch.query.resultContext.maxResults / limit > 1 ? 2 : null,
         }
     } else  if (page > 1){
         results.pages = {
             prevPage : page - 1 ,
             currentPage : page ,
-            nextPage : dataFetch.results[0].maxResults / limit > page ? page + 1 : null,
-             class : "deactive"
+            nextPage : dataFetch.query.resultContext.maxResults / limit > page ? page + 1 : null ,
         }
     } 
-    console.log(results.pages.nextPage ,"next")
         const newFetch = dataFetch.results[0].results
         results.results = newFetch.slice(startIndex, endIndex);
         return results
@@ -93,10 +93,7 @@ async function fetchAPI() {
 		})
             return respond.json()
 }
-
 // end fetch
-
-
 
 app.listen(PORT, () => {
 	console.log(`Running at \`http://localhost:${PORT}\`...`);
