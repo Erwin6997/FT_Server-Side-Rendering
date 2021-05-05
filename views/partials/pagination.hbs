@@ -3,14 +3,14 @@
         <a  
             href="/?key={{key}}&page={{this.finalPages.prevPage}}" 
             class="paginationPrevious">
-            <i class="fas fa-angle-left"></i>
+            <i class="fas fa-angle-left"> &laquo; </i>
         </a>
 
     {{else}}
         <a  
             href="/?key={{key}}&page={{this.finalPages.prevPage}}" 
             class="paginatedNumber">
-            <i class="fas fa-angle-left"></i>
+            <i class="fas fa-angle-left"> &laquo; </i>
         </a>
         {{/if}}
 
@@ -50,13 +50,13 @@
         <a 
             href="/?key={{key}}&page={{this.finalPages.nextPage}}"
             class="paginationNext">
-            <i class="fas fa-angle-right"></i>
+            <i class="fas fa-angle-right"> &raquo; </i>
         </a>
     {{else}}
         <a 
             href="/?key={{key}}&page={{this.finalPages.nextPage}}"
             class="paginatedNumber">
-            <i class="fas fa-angle-right"></i>
+            <i class="fas fa-angle-right"> &#8594; </i>
         </a>
     {{/if}}
 </div>
