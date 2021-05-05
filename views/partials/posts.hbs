@@ -1,4 +1,7 @@
 <div class="container">
+    {{#if this.message}}
+    <h1 class="error">{{this.message}}</h1>
+    {{/if}}
     {{#each finalResults}}
     <div class="containerNews">
         <div class="containerTitle"><a href="{{this.location.uri}}" class="title">{{this.title.title}}</a></div>

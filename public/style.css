@@ -85,6 +85,17 @@ body {
   cursor: pointer;
 }
 
+.error {
+  color: #990f3d;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  font-family: MetricWeb,sans-serif;
+  text-align: center;
+  margin-bottom: 10cm;
+  padding-top: 2cm;
+
+}
 .paginatedNumber {
   display: none;
   width: 40px;
