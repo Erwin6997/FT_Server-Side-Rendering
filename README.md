@@ -47,6 +47,7 @@ These instructions are aimed at a developer who has been added to the project te
 
 ### Clone the repository from GitLab :
 gh repo clone Erwin6997/FT_Server-Side-Rendering
+[https://github.com/Erwin6997/FT_Server-Side-Rendering]
 
 ### Change current working directory to Project directory
 cd FT_Server-Side-Rendering
