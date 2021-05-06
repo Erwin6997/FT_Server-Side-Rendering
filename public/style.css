@@ -90,14 +90,14 @@ body {
 }
 
 .error {
-  color: #990f3d;
-  font-size: 20px;
+  color: #363435;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 400;
   font-family: MetricWeb,sans-serif;
-  text-align: center;
+  text-align: left;
   margin-bottom: 10cm;
-  padding-top: 2cm;
+  padding: 2cm 5%;
 
 }
 .paginatedNumber {
