@@ -65,6 +65,8 @@ Install NodeJS and Dependencies
 Next reload the package.json 
 ### npm init
 
+## .evn
+The .evn file has variables which the server need that to run such as PORT, Key, URL.
 ## Start the server :
 nodemon server.js
 (If you get error about Access to this API has been disallowed means you Token Key which you need for get access to the FT API is expired )
