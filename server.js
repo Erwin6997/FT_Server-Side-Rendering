@@ -1,17 +1,22 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const app = express();
-const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
 const Handlebars = require('handlebars');
 const paginateHelper = require('express-handlebars-paginate');
-
+const dotenv = require('dotenv');
+const { helpers } = require('handlebars');
+dotenv.config();
 app.use(express.json());
-app.use(bodyParser.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'hbs');
-const PORT = process.env.PORT || 3000;
+
+//.evn Variables :
+const PORT = process.env.PORT;
+const URL = process.env.FT_URL;
+const FTKey = process.env.FT_KEY;
+const FTContentType = process.env.CONTENT_TYPE;
 app.engine('hbs', exphbs({
     defaultLayout: 'main',
     extname: '.hbs',
@@ -44,7 +49,7 @@ app.get('/', async (req, res) => {
         bodySend.queryString = key;
         const dataFetch = await fetchAPI()
     if (dataFetch.results[0].indexCount == 0) {
-        const message = `The Search ${dataFetch.query.queryString} not found `;
+        const message = `No results found for ${dataFetch.query.queryString} `;
         res.render('home', {message})
         }else {
             const paginationData = await pagination(dataFetch , page)
@@ -59,7 +64,7 @@ async function pagination(dataFetch , page) {
     if (!page){
         page = 1;
     }
-    const limit = 10;
+    const limit = 10; // this is the limit of the news on one page
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
     const results = {}
@@ -83,12 +88,12 @@ async function pagination(dataFetch , page) {
 
 // fetch function
 async function fetchAPI() {
-    const respond = await fetch(`https://api.ft.com/content/search/v1`, {
+    const respond = await fetch(URL , {
 			method: 'POST',
 			body: JSON.stringify(bodySend),
 			headers: {
-				'Content-Type': 'application/json',
-				'X-Api-Key': '59cbaf20e3e06d3565778e7b9758f7892e89468293a48663b98bd1d9'
+				'Content-Type': FTContentType,
+				'X-Api-Key': FTKey
 			    }
 		})
             return respond.json()
