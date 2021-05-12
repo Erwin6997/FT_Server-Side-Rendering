@@ -1,18 +1,19 @@
+
 <div class="pageNumberContainer" id="second-form">
     {{#if this.finalPages.prevPage}}
+        <a href="/?key={{key}}&page=1" class="paginationFirstPage">
+        <i class="first"> First page </i>
+    </a>
+
     <a href="/?key={{key}}&page={{this.finalPages.prevPage}}" class="paginationPrevious">
         <i class="angle"> &laquo; </i>
     </a>
-    {{else}}
-    <a class="paginatedNumber"></a>
     {{/if}}
 
     {{#if this.finalPages.prevPage}}
     <a href="/?key={{key}}&page={{this.finalPages.prevPage}}" class="pagination1">
         {{this.finalPages.prevPage}}
     </a>
-    {{else}}
-    <a class="paginatedNumber"></a>
     {{/if}}
 
     <a href="/?key={{key}}&page={{this.finalPages.currentPage}}" class="pagination2">
@@ -23,15 +24,11 @@
     <a href="/?key={{key}}&page={{this.finalPages.nextPage}}" class="pagination3">
         {{this.finalPages.nextPage}}
     </a>
-    {{else}}
-    <a class="paginatedNumber"></a>
     {{/if}}
 
     {{#if this.finalPages.nextPage}}
     <a href="/?key={{key}}&page={{this.finalPages.nextPage}}" class="paginationNext">
         <i class="angle"> &raquo; </i>
     </a>
-    {{else}}
-    <a class="paginatedNumber"></a>
     {{/if}}
 </div>
