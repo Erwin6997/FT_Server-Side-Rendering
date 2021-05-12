@@ -128,12 +128,12 @@ body {
 .containerNews {
   margin: 10px 15% 10px 15%;
   padding: 15px 30px 5px 30px;
-  font-family: FinancierDisplayWeb, serif;
   border-bottom: 1px solid #CCC1B7;
 }
 
 .title {
-  font-size: 20px;
+  font-family: Georgia, serif;
+  font-size: 22px;
   font-weight: 700;
   color: #990f3d;
   line-height: 33px;
@@ -145,28 +145,33 @@ body {
 }
 
 .summery {
+  font-family: Georgia, serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 25px;
   color: #333322;
   text-decoration: none;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
 .subheading {
+  font-family: Georgia, serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 25px;
   color: #333330;
   text-decoration: none;
 }
 
 .byline {
+  font-family: Georgia,serif;
   padding-top: 30px;
   font-style: normal;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 20px;
   color: #383838;
   text-decoration: none;
