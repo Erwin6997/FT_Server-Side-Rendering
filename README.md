@@ -67,7 +67,13 @@ Next reload the package.json
 ### npm init
 
 ## .evn
-The .evn file has variables which the server need that to run such as PORT, Key, URL.
+The .evn file has fore variables which the server need them to run such as:
+   1) PORT for port the app used, 
+   2) FT_KEY for the Key which the app need for get access to the API, 
+   3) FT_URL for Financial Times API url,
+   4) CONTENT_TYPE for FT content type for API.
+
+For have this file you can connect with developer team with this email [zarghani.m@gmail.com].
 ## Start the server :
 nodemon server.js
 (If you get error about Access to this API has been disallowed means you Token Key which you need for get access to the FT API is expired )
