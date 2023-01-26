@@ -77,3 +77,4 @@ For have this file you can connect with developer team with this email [zarghani
 ## Start the server :
 nodemon server.js
 (If you get error about Access to this API has been disallowed means you Token Key which you need for get access to the FT API is expired )
+NPM Start
