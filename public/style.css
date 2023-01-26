@@ -148,8 +148,8 @@ body {
 .summery {
   font-family: Georgia, serif;
   font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 20px;
   line-height: 25px;
   color: #333322;
   text-decoration: none;
@@ -168,16 +168,23 @@ body {
 }
 
 .byline {
-  font-family: Georgia,serif;
-  padding-top: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 20px;
   font-style: normal;
   font-weight: 600;
-  font-size: 15px;
-  line-height: 20px;
-  color: #383838;
+  font-size: 20px;
+  line-height: 15px;
+  color: #474444;
   text-decoration: none;
 }
-
+.green{
+  color: rgb(43, 139, 68);
+}
+.red{
+  color: #990f3d;
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .containerDate {
   display: flex;
   align-items: center;

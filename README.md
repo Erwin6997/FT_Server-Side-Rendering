@@ -57,7 +57,7 @@ As of writing this guide the main branch used for development is : develop
 To switch to this branch : git checkout develop
 
 ## Installing dependencies
-TThis project requires NodeJS for running, You can install it by referring to the official NodeJS page : [https://nodejs.org/en/] 
+This project requires NodeJS for running, You can install it by referring to the official NodeJS page : [https://nodejs.org/en/] 
 The NodeJS version used at the time of writing this file is : v14.16.1 You can check the installed version using Node -v The package.json file contains the list of all npm plugins and libraries used for this project. 
 Please ensure this file is updated incase any plugin is added / removed. 
 Please follow below steps for installation : 
